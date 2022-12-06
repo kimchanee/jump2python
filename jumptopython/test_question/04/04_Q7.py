@@ -4,20 +4,12 @@
 # replace 함수를 사용해 보자.
 
 f = open("test_Q7.txt","r")
-
-while True :
-    text = f.readline()
-
-    text.replace("java","python")
-    
-    if not text :
-        break
-
-    print (text)
-
+texts = f.read()
 f.close()
 
-# for line in f.readlines() :
-#     line=line.strip()
-#     print(line)
-# f.close()
+texts = texts.replace('java','python')
+
+f = open("test_Q7.txt","w")
+f.write(texts)
+f.close()
+
